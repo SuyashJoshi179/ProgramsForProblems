@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void printcontigous(int arr[], int n) {
+    int ans = 0;
+    for(int i = 0; i<n; i++) {
+        for(int j = i; j<n; j++) {
+            bool isconti = true;
+            for(int k = i; k<=j; k++) {
+                bool ispresent = false;
+                for(int l = i; l < k; l++) {
+                    if( arr[k] - arr[l] == 1 || arr[l] - arr[k] == 1) {
+                        ispresent = true;
+                        break;
+                    }
+                }
+                for(int l = k+1; l <= j; l++) {
+                    if( arr[k] - arr[l] == 1 || arr[l] - arr[k] == 1) {
+                        ispresent = true;
+                        break;
+                    }
+                }
+                if(!ispresent) {
+                    isconti = false;
+                    break;
+                }
+            }
+            if(isconti) {
+                cout<<i<<" "<<j<<endl;
+                ans = (ans < (j - i + 1)) ? (j - i + 1) : ans;
+            }
+        }
+    }
+    cout<<ans<<endl;
+
+}
+
+int main() {
+    int arr1[] = {14, 12, 11, 20, 1};
+    printcontigous(arr1, 5);
+    return 0;
+}

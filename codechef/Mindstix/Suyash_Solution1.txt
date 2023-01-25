@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+void checkifincreasing(int arr[], int n) {
+    int i = 1, count = 0;
+    while(i < n) {
+        if(arr[i-1] >= arr[i]) {
+            if(count < 2) {
+                count++;
+            } else {
+                cout<<"No"<<endl;
+                return;
+            }
+        }
+        i++;
+    }
+    cout<<"Yes"<<endl;
+}
+
+int main() {
+    // Test Case 1
+    int arr1[] = {2, 2, 3, 4, 5, 5};
+    checkifincreasing(arr1, 6);
+
+    // Test Case 2
+    int arr2[] = {2, 2, 3, 4, 4, 5, 5};
+    checkifincreasing(arr2, 7);
+
+    return 0;
+}

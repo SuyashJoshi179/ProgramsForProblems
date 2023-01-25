@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void isSubset(int pattern[], int pat_len, int text[], int text_len) {
+    int p;
+    for(int i = 0; i<pat_len; i++) {
+        bool isthere = false;
+        for(int j = 0; j<text_len; j++) {
+            if(pattern[i] == text[j]) {
+                isthere = true;
+                break;
+            }
+        }
+        if(!isthere) {
+            cout<<"No"<<endl;
+            return;
+        }
+    }
+    cout<<"Yes"<<endl;
+}
+
+int main() {
+    // Test Case 1
+    int text[] = {11, 1, 13, 21, 3, 7};
+    int pattern[] = {11, 3, 7, 1};
+    isSubset(pattern, 4, text, 6);
+    
+    // Test Case 2
+    int text1[] = {10, 5, 2, 23, 19};
+    int pattern1[] = {19, 5, 3};
+    isSubset(pattern1, 5, text1, 3);
+    return 0;
+}
