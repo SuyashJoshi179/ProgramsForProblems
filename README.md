@@ -5,12 +5,12 @@
 
 Philosophy aside, This repo contains my solutions to different programming problems across multiple platforms and competitions.
 
-- [AtCoder](AtCoder)
-- [CodeChef](codechef)
 - [CodeForces](codeforces)
+- [CodeChef](codechef)
 - [CSES](CSES)
 - [Google KickStart](KickStart)
-- [Meta Hacker Cup](Hacker%20Cup)
+- [AtCoder](AtCoder)
 - [ACM ICPC](ICPC)
+- [Meta Hacker Cup](Hacker%20Cup)
 
 *Note: This repo doesn't include my solutions for problems on LeetCode and GeeksForGeeks.*
